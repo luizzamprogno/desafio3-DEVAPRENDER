@@ -15,11 +15,14 @@ while chute != numero_alvo:
         if 1 <= chute <= 100:
             # Condição caso o usuário acerte
             if chute == numero_alvo:
-                print('Acertou!')
+                print('PARABENS, RESPOSTA CORRETA \n')
                 continuar = input('Deseja continuar jogando? (s/n)? ')
+                # Loop para travar a resposta do usuário sempre entre 's' ou 'n'
+                while continuar.lower() not in ['s', 'n']:
+                    continuar = input('Por favor, digite apenas "s" para continuar no jogo ou "n" para encerrar sua partida: ')
                 if continuar.lower() == 'n':
                     chute = numero_alvo
-                else:
+                elif continuar.lower() == 's':
                     # Se caso quiser continuar jogando, a variavel chute volta a ser 0 para sair continuar no loop,
                     chute = 0
                     # E um novo número aleatório é gerado para um novo jogo
