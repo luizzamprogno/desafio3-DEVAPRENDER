@@ -1,5 +1,12 @@
 import random
 
+print('#'*30)
+print('BEM VINDO AO JOGO DE ADIVINHAÇÃO DE NÚMERO')
+print('#'*30)
+
+input('Aperte ENTER para iniciar...')
+print()
+
 # Iniciar com um numero aleatório entre 1 e 100
 numero_alvo = random.randint(1, 100)
 # Iniciar o chute do usuario antes do While
@@ -7,8 +14,6 @@ chute = 0
 
 # Enquanto o chute do usuario for diferente do valor aleatório, continue no loop
 while chute != numero_alvo:
-    print(numero_alvo)
-
     try:
         chute = int(input('Chute um numero entre 1 e 100: '))
         # Para validar que a entrada não seja menor que 1 e nem maior que 100
